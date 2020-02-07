@@ -8,6 +8,9 @@ var db = require("./models");
 
 var app = express();
 
+let Port = 8080 || process.env.PORT
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -62,7 +65,6 @@ app.get("/videos", function(req, res) {
 });
 
 
-let Port = 8080
 
 app.listen(Port, function() {
   console.log("http://localhost:" + Port);
